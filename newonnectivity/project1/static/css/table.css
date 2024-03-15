@@ -1,0 +1,24 @@
+table {
+    overflow:hidden;
+    th, td {
+      padding:25px 5px;
+      text-align:center;
+      vertical-align:top;
+      min-height: auto;
+      max-width: fit-content;
+  
+    }
+    th {
+      background-color:#009;
+      color:#fff;
+    }
+    td {
+      background-color:#eee;
+    }
+    tr {
+      transition:all 1s ease-in-out;
+      &.slide-out {
+        transform:translateX(100%);
+      }
+    }
+  }

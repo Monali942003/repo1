@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Accidental Records</title>
+  <!-- <link rel="stylesheet" href="style2.css"> -->
+</head>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+ }
+
+body {
+    background: url('images/img10')no-repeat;
+    background-size: cover;
+    color:#fff;
+}
+
+.registration-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+ }  
+
+.registration-form h1 {
+     font-size: 30px;
+     text-align: center;
+     text-transform: uppercase;
+     margin: 40px 0;
+}
+
+.registration-form p {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.registration-form input {
+      font-size: 16px;
+      padding: 15px 10px;
+      width: 100%;
+      border: 0;
+      border-radius: 5px;
+      outline: none;
+       margin-bottom: 15px;
+      margin: 20px 0 12px 0; 
+      width: calc(100% / 2 - 20px);
+
+}
+.registration-form button {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 20px 0;
+        padding: 10px 15px;
+        width: 50%;
+        border: 0;
+        border-radius: 5px;
+        background-color: #fff;
+}
+.registration-form button:hover {
+      color:rgb(207, 41, 12);
+} 
+
+
+
+
+.select-dropdown,
+.select-dropdown * {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	box-sizing: border-box;
+}
+.select-dropdown {
+	position: relative;
+	background-color: #E6E6E6;
+	border-radius: 4px;
+}
+.select-dropdown select {
+	font-size: 1rem;
+	font-weight: normal;
+	max-width: 100%;
+	padding: 8px 24px 8px 10px;
+	border: none;
+	background-color: transparent;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	appearance: none;
+}
+.select-dropdown select:active, .select-dropdown select:focus {
+	outline: none;
+	box-shadow: none;
+}
+.select-dropdown:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	width: 0;
+	height: 0;
+	margin-top: -2px;
+	border-top: 5px solid #aaa;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+}
+</style>
+
+<body>
+  <div class="registration-form">
+
+    <h1>Accident records</h1>
+
+    <form action="{% url 'rcd' %}" method='POST'>
+      {%csrf_token%}
+      <p>Full Name:</p>
+      <input type="text" name="Fullname" placeholder="FullName" required>
+      <p>Email:</p>
+      <input type="email" name="email" placeholder="Email" required>
+      <p>Vehical Number:</p>
+      <input type="vn" name="vnum" placeholder="vehical number" id="vnum" required>
+      <p>Vehical Name:</p>
+      <input type="vehical name" name="vname" id="vname" placeholder="vehical name" required>
+      <p>Date:</p>
+      <input type="date" name="date" placeholder="date" id="date" required>
+      <p>Password:</p>
+      <input type="password" name="password" placeholder="password" id="password" required>
+      <div class="select-dropdown" id="area" name="area">     
+        <select>
+          <option value="Area">Area</option>
+          <option value="Urban">Urban</option>
+          <option value="Rural">Rural</option>
+        </select>
+      </div>
+      <div class="select-dropdown" id="Accident Type" name="Accident Type">   
+        <select>
+          <option value="Accident Type">Accident Type</option>
+          <option value="Fatal">Fatal</option>
+          <option value="Hospitalised">Hospitalised</option>
+          <option value="MinorInjury">Minor Injury</option>
+          <option value="Non Injury">Non Injury</option>
+        </select>
+      </div>
+      <div class="select-dropdown" id="Type of Whether" name="Type of Whether">
+        <select>
+          <option value="Type of Whether">Type of Whether</option>
+          <option value="Clear">Clear</option>
+          <option value="Rainy">Rainy</option>
+          <option value="Foggy">Foggy</option>
+        </select>
+      </div>
+      <div class="select-dropdown" id="Type of Collision"  name="Type of Collision" required>
+        <select>
+          <option value="Type of Collision">Type of Collision</option>
+          <option value="V2V">Vehicle to Vehicle</option>
+          <option value="V2P">Vehicle to Pedistrain</option>
+          <option value="V2B">Vehicle to Biycycle</option>
+          <option value="V2A">Vehicle to Animal</option>
+          <option value="Hit Parked Vehical">Hit Parked Vehicle</option>
+        </select>
+      </div>  
+    
+      <p>Road Name:</p>
+      <input type="rname" name="rname" placeholder="road name"  id="rname" name="rname" required>
+      <p>Road Number:</p>
+      <input type="rnumber" name="rnumber" placeholder="road number"  id="rnumber" name="rnumber" required>
+      <p>GPS Loction:</p>
+      <input type="gl" name="loction" placeholder="loction" id="location"  name="location" required>
+      <div class="select-dropdown" name="Type of Road" id="Type of Road">
+        <select>
+          <option value="Type of Road">Type of Road</option>
+          <option value="Expressway">Expressway</option>
+          <option value="Nationalhighway">Nationalhighway</option>
+          <option value="Statehighway">Statehighway</option>
+
+        </select>
+      </div>
+      <div class="select-dropdown" id="Speed Limit" name="Speed Limit">
+        <select>
+          <option value="Speed Limit">Speed Limit</option>
+          <option value="40">40</option>
+          <option value="40-60">40-60</option>
+          <option value="60-80">60-80</option>
+      
+        </select>
+      </div>
+
+      <div class="select-dropdown" id="Road Features" name="Road Features">
+        <select>
+          <option value="Road Features">Road Features</option>
+          <option value="Streait Road">Streait Road</option>
+          <option value="Curved Road">Curved Road</option>
+          <option value="Bridge">Bridge</option>
+        
+        </select>
+      </div>
+      <div class="select-dropdown" id="Physical Divider" name="Physical Divider">
+        <select>
+          <option value="Physical Divider">Physical Divider</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="button">
+        <input type="submit" value="Report">
+      </div>
+    </form>
+</body>
+</html>

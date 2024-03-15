@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,700&display=swap');
+
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+    background: #efefef;
+}
+
+section {
+  text-align: center;
+  padding: 1.5em 1em;
+}
+
+.header {
+  width: 960px;
+  margin: 1em auto;
+  text-align: center;
+  border-bottom: 2px solid rgba(29,29,29,0.6);
+  padding: 1em;
+}
+
+.header h1 {
+  margin-bottom: 0.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header a {
+  text-decoration: none;
+  color: #1d1d1d;
+  font-weight: 700;
+  transition: all 0.35s ease-in-out;
+}
+
+.header a:hover {
+  color: #e99041;
+}
+
+.row {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heading {
+    margin-bottom: 1em;
+}
+
+.figure {
+  background: #1d1d1d;
+  display: inline-block;
+  margin: 10px;
+  max-width: 280px;
+  min-width: 230px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.figure * {
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+/* Section 4 - Hover Effect #04 */
+
+.section-4 {
+  background: #1d1d1d;
+  color: #efefef;
+}
+
+.section-4 .figure {
+  background: #efefef;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+.section-4 .figure img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+.section-4 .figure div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: table;
+  padding: 0 20px;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.section-4 .figure div:before,
+.section-4 .figure div:after {
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 100%;
+  content: '';
+  background-color: rgba(29,29,29,0.5);
+  opacity: 0.8;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-tranisition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.section-4 .figure div:before {
+  right: -150%;
+}
+
+.section-4 .figure div:after {
+  left: -150%;
+}
+
+.section-4 .figure h3 {
+  color: #1d1d1d;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0;
+}
+
+.section-4 .figure h3 span {
+  font-weight: 700;
+  display: block;
+}
+
+.section-4 .figure a {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+.section-4 .figure:hover img,
+.section-4 .figure.hover img {
+  opacity: 0.3;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.section-4 .figure:hover h3,
+.section-4 .figure.hover h3 {
+  opacity: 1;
+}
+
+.section-4 .figure:hover div,
+.section-4 .figure.hover div {
+  opacity: 1;
+}
+
+.section-4 .figure:hover div:before,
+.section-4 .figure.hover div:before,
+.section-4 .figure:hover div:after,
+.section-4 .figure.hover div:after {
+  width: 150%;
+}
+

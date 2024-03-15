@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROAD SAFETY </title>
+  <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <body>
+  <header class="header">
+    <a href="#" class="logo">ROAD SAFETY</a>
+    <nav class="nav-items">
+        <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About Us</a>
+            <li><a href="#">Rules and Acts</a></li>
+            <li><a href="#">WIldlife Conversation</a></li>
+            <li><a href="#">Citizen corner</a></li>
+        </ul>
+    </nav>
+</div>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>ROAD SAFETY </h1>
+      <p>ROADS ARE A BEST SIGN OF DEVELOPING NATION.</p>
+      <button>BACK</button>
+    </div>    
+  <footer class="footer">
+    <div class="copy">&copy; 2022 Developer</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
+
